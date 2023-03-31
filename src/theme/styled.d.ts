@@ -3,10 +3,9 @@ import breakpoints from './breakpoints';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    fontFamily: Record<'primary', 'FONT' | 'FONT2'>;
+    fontFamily: Record<'primary', 'Inter'>;
     fontWeight: {
       primary: {
-        light: number;
         medium: number;
         bold: number;
       };

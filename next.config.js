@@ -5,4 +5,7 @@ module.exports = withImages({
     NODE_ENV: process.env.NODE_ENV,
     BASE_PATH: process.env.BASE_PATH,
   },
+  images: {
+    disableStaticImages: true
+  }
 });

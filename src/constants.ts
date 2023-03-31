@@ -13,14 +13,20 @@ const { publicRuntimeConfig } = getConfig();
 export const BASE_PATH =
   typeof window !== 'undefined'
     ? window.location.origin
-    : publicRuntimeConfig.BASE_PATH || 'https://BASE_DOMAIN.LTD';
+    : publicRuntimeConfig.BASE_PATH || 'https://leadeagle.pl';
 
 export const fonts: Font[] = [
   {
     type: 'primary',
-    name: 'FONT',
-    path: 'FONT/FONT-TYPE.ttf',
-    weight: 300,
+    name: 'Inter',
+    path: 'Inter/Inter-Bold.ttf',
+    weight: 700,
+  },
+  {
+    type: 'primary',
+    name: 'Inter',
+    path: 'Inter/Inter-Medium.ttf',
+    weight: 500,
   },
 ];
 
@@ -28,6 +34,6 @@ export const paths = {
   home: '/',
 };
 
-export const titleTemplate = '%s | PAGE_TITLE';
+export const titleTemplate = '%s | LeadEagle';
 
 export const Cookies = {};
