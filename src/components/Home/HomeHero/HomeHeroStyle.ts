@@ -1,7 +1,7 @@
 import { spacingY } from '@utils/stylesUtils';
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.section`
   height: 80vh;
   display: flex;
   justify-content: center;
@@ -11,8 +11,6 @@ export const Container = styled.div`
   background: rgba(0, 0, 0, 0.33);
   ${spacingY(3.5)};
 `;
-
-export const Logo = styled.img``;
 
 export const LogoWrapper = styled.div`
   svg {

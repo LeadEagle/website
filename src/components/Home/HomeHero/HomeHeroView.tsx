@@ -1,4 +1,4 @@
-import { Logo } from '@assets/Logo';
+import { Logo } from '@assets/vectors/Logo';
 import { Title } from '@shared/Typography';
 import * as React from 'react';
 import { Container, LogoWrapper, Wrapper } from './HomeHeroStyle';

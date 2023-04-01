@@ -1,6 +1,9 @@
+import { spacingY } from '@utils/stylesUtils';
 import styled from 'styled-components';
 
 export const Container = styled.main`
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   min-height: 100vh;
@@ -26,4 +29,7 @@ export const Container = styled.main`
       rgba(38, 89, 137, 0.1) 0%,
       rgba(39, 115, 185, 0) 100%
     );
+
+  ${spacingY(6)};
+  padding-bottom: 3rem;
 `;

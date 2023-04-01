@@ -1,7 +1,7 @@
 import { spacingX } from '@utils/stylesUtils';
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.section`
   opacity: 0.25;
   display: flex;
   justify-content: center;
