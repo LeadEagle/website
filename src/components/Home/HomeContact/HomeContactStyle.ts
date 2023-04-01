@@ -34,14 +34,16 @@ export const ContactLinkIconWrapper = styled.div`
     font-size: 2rem;
   `}
 
-  ${({ theme }) => {
-    const filterColor = transparentize(0.67, theme.colors.primary);
+  @supports not (-webkit-touch-callout: none) {
+    ${({ theme }) => {
+      const filterColor = transparentize(0.67, theme.colors.primary);
 
-    return css`
-      filter: drop-shadow(0px 0px 16px ${filterColor})
-        drop-shadow(0px 0px 128px ${filterColor});
-    `;
-  }}
+      return css`
+        filter: drop-shadow(0px 0px 16px ${filterColor})
+          drop-shadow(0px 0px 128px ${filterColor});
+      `;
+    }}
+  }
 `;
 
 export const ContactLinkTitle = styled.div`
