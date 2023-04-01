@@ -1,24 +1,7 @@
-import { fonts } from '@constants';
 import { breakpoint } from '@theme/breakpoints';
-import { createGlobalStyle, css } from 'styled-components';
-
-const fontsFacesDeclarations = fonts
-  .map(
-    ({ path, name, weight }) => css`
-      @font-face {
-        font-family: ${name};
-        src: url('${path}');
-        font-style: normal;
-        font-weight: ${weight};
-        font-display: swap;
-      }
-    `
-  )
-  .join('');
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  ${fontsFacesDeclarations};
-
   body {
     font-family: ${({ theme }) => theme.fontFamily.primary}, sans-serif;
     background: ${({ theme }) => theme.colors.light};
