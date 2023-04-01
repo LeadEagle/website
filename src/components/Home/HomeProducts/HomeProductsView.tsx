@@ -22,7 +22,7 @@ const HomeProducts: React.FC = () => {
             <MyPolitics />
           </ProductLogoWrapper>
           <ProductTitle>
-            Poland's largest political education platform
+            Poland&apos;s largest political education platform
           </ProductTitle>
         </Product>
         <Product href="https://orlow.me/dzialaj" target="_blank">
