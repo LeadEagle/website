@@ -1,24 +1,38 @@
-import { spacingX } from '@utils/stylesUtils';
+import { Section } from '@shared/Section';
+import { breakpoint } from '@theme/breakpoints';
+import { spacingX, spacingY } from '@utils/stylesUtils';
 import { transparentize } from 'polished';
 import styled, { css } from 'styled-components';
 
-export const Container = styled.section`
-  max-width: ${({ theme }) => theme.breakpoints.lg}px;
+export const Container = styled(Section)`
   width: 100%;
   margin: auto;
 `;
 
 export const Inner = styled.div`
   display: flex;
-  justify-content: space-between;
   padding: 2.5rem 3rem;
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
+
+  ${breakpoint('xs', 'lg')`
+    flex-direction: column;
+    align-items: center;
+    ${spacingY(2)};
+  `}
+
+  ${breakpoint('lg')`
+    justify-content: space-between;
+  `}
 `;
 
 export const ContactLinkIconWrapper = styled.div`
   color: ${({ theme }) => theme.colors.primary};
-  font-size: 2rem;
+  font-size: 1.5rem;
+
+  ${breakpoint('sm')`
+    font-size: 2rem;
+  `}
 
   ${({ theme }) => {
     const filterColor = transparentize(0.67, theme.colors.primary);
@@ -33,16 +47,26 @@ export const ContactLinkIconWrapper = styled.div`
 export const ContactLinkTitle = styled.div`
   color: ${({ theme }) => theme.colors.light};
   opacity: 0.66;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
   transition: 0.2s ease-in-out;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  ${breakpoint('sm')`
+    font-size: 1.5rem;
+  `}
 `;
 
 export const ContactLink = styled.a`
   display: flex;
   align-items: center;
-
   ${spacingX(1)};
+
+  @media only screen and (max-width: 420px) {
+    width: 100%;
+  }
 
   &:hover {
     ${ContactLinkTitle} {

@@ -1,3 +1,4 @@
+import { library } from '@fortawesome/fontawesome-svg-core';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Title } from '@shared/Typography';
@@ -12,6 +13,8 @@ import {
 
 const PHONE_NUMBER = '+48 573 491 241';
 const EMAIL = 'hello@leadeagle.pl';
+
+library.add(faPhone, faEnvelope);
 
 const HomeContact: React.FC = () => {
   return (
