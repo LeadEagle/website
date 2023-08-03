@@ -37,7 +37,9 @@ export const Title = styled.h2`
 export const Inner = styled.div`
   display: flex;
   align-items: center;
-  ${spacingX(2)};
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export const CompanyLogo = styled.img`
